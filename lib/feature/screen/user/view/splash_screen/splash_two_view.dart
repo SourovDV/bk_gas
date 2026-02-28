@@ -1,4 +1,5 @@
 import 'package:bk_gas/app/appColor.dart';
+import 'package:bk_gas/app/appPath.dart';
 import 'package:bk_gas/feature/common/commonNextButton.dart';
 import 'package:bk_gas/feature/screen/user/controller/splash_controller/splash_two_controller.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +24,7 @@ class SplashTwoView extends GetView<SplashTwoController> {
         child: Column(
           children: [
             SizedBox(height: 40.h,),
-            Image.asset("assets/amico.png"),
+            Image.asset(AppPath.splashTwo),
             Spacer(),
            CommonNextButton(call: (){
                showDialog(

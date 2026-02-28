@@ -1,4 +1,5 @@
 import 'package:bk_gas/app/appColor.dart';
+import 'package:bk_gas/app/appPath.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,7 +18,7 @@ class SplashOneView extends StatelessWidget {
                 borderRadius: BorderRadius.circular(50.r)
               ),
               child: Image.asset(
-                "assets/one.png",
+                AppPath.splashOne,
               ),
             ),
           ),
