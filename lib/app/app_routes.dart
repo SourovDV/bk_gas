@@ -7,7 +7,13 @@ import 'package:bk_gas/feature/screen/user/view/authentication_view/sign_up_view
 import 'package:bk_gas/feature/screen/user/view/authentication_view/sign_up_view/set_profile.dart';
 import 'package:bk_gas/feature/screen/user/view/authentication_view/sign_up_view/sign_up_view.dart';
 import 'package:bk_gas/feature/screen/user/view/authentication_view/sign_up_view/verify_number_view.dart';
+import 'package:bk_gas/feature/screen/user/view/homeView/account_view.dart';
+import 'package:bk_gas/feature/screen/user/view/homeView/card_view.dart';
+import 'package:bk_gas/feature/screen/user/view/homeView/home_page_view.dart';
 import 'package:bk_gas/feature/screen/user/view/homeView/item_view.dart';
+import 'package:bk_gas/feature/screen/user/view/homeView/notification_view.dart';
+import 'package:bk_gas/feature/screen/user/view/homeView/order_view.dart';
+import 'package:bk_gas/feature/screen/user/view/homeView/product_details.dart';
 import 'package:bk_gas/feature/screen/user/view/splash_screen/splash_one_view.dart';
 import 'package:bk_gas/feature/screen/user/view/splash_screen/splash_three_view.dart';
 import 'package:bk_gas/feature/screen/user/view/splash_screen/splash_two_view.dart';
@@ -24,6 +30,12 @@ class AppRoutes{
     GetPage(name: AppPages.verifyPage, page:()=>VerifyNumberView(),binding: AuthenticationBindings()),
     GetPage(name: AppPages.setProfile, page:()=>SetProfile(),binding: AuthenticationBindings()),
     GetPage(name: AppPages.signIn, page:()=>SignInView(),binding: AuthenticationBindings()),
-    GetPage(name: AppPages.itemView, page: ()=>ItemView(),binding: HomepageBindings())
+    GetPage(name: AppPages.itemView, page: ()=>ItemView(),binding: HomepageBindings()),
+    GetPage(name: AppPages.homeView, page: ()=>HomePageView(),binding: HomepageBindings()),
+    GetPage(name: AppPages.cardView, page: ()=>CardView(),binding: HomepageBindings()),
+    GetPage(name: AppPages.orderView, page: ()=>OrderView(),binding: HomepageBindings()),
+    GetPage(name: AppPages.accountView, page: ()=>AccountView(),binding: HomepageBindings()),
+    GetPage(name: AppPages.productDetails, page: ()=>ProductDetails(),binding: HomepageBindings()),
+    GetPage(name: AppPages.notification, page: ()=>NotificationView(),binding: HomepageBindings()),
   ];
 }

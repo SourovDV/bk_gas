@@ -8,4 +8,10 @@ class AppPages{
   static final String setProfile = '/setProfile';
   static final String signIn = '/signIn';
   static final String itemView = '/items';
+  static final String homeView = '/homeView';
+  static final String cardView = '/cardView';
+  static final String orderView = '/orderView';
+  static final String accountView = '/accountView';
+  static final String productDetails = '/productsDetails';
+  static final String notification = '/notification';
 }
