@@ -4,4 +4,8 @@ class AppPages{
   static final String splashThreePages ='/splash_three';
   static final String numberPage= '/numberPage';
   static final String signUpPage = '/signUpPage';
+  static final String verifyPage = '/verify';
+  static final String setProfile = '/setProfile';
+  static final String signIn = '/signIn';
+  static final String itemView = '/items';
 }

@@ -1,6 +1,13 @@
+import 'package:bk_gas/app/appColor.dart';
+import 'package:bk_gas/feature/common/commonNextButton.dart';
+import 'package:bk_gas/feature/common/common_number_button.dart';
+import 'package:bk_gas/feature/common/common_text_form_field.dart';
+import 'package:bk_gas/feature/screen/user/controller/authentication_controller/sign_up_controller/sign_up_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
-class SignUpView extends StatelessWidget {
+class SignUpView extends GetView<SignUpController> {
   const SignUpView({super.key});
 
   @override
@@ -17,18 +24,17 @@ class SignUpView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
                 const SizedBox(height: 10),
 
                 /// Top Bar
                 Row(
-                  children: const [
+                  children:  [
                     Icon(Icons.arrow_back),
                     Spacer(),
                     Text(
                       "Sign Up",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 18.sp,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -36,196 +42,63 @@ class SignUpView extends StatelessWidget {
                   ],
                 ),
 
-                const SizedBox(height: 30),
+                 SizedBox(height: 50.h),
 
-                const Text(
+                 Text(
                   "Sign Up to Join",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w600),
                 ),
 
-                const SizedBox(height: 25),
+                 SizedBox(height: 25.h),
 
                 /// First Name
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: "First name",
-                    prefixIcon:
-                    Icon(Icons.person_outline, color: primaryColor),
-                    filled: true,
-                    fillColor: fieldColor,
-                    contentPadding:
-                    const EdgeInsets.symmetric(vertical: 18),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide:
-                      BorderSide(color: primaryColor),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide:
-                      BorderSide(color: primaryColor, width: 1.5),
-                    ),
-                  ),
+                CommonTextFormField(
+                  primaryColor: AppColor.primaryColor,
+                  fieldColor: fieldColor,
+                  text: "First name",
+                  icons: Icon(Icons.people_outline_rounded),
                 ),
-
-                const SizedBox(height: 15),
+                 SizedBox(height: 15.h),
 
                 /// Last Name
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: "Last name",
-                    prefixIcon:
-                    Icon(Icons.person_outline, color: primaryColor),
-                    filled: true,
-                    fillColor: fieldColor,
-                    contentPadding:
-                    const EdgeInsets.symmetric(vertical: 18),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide:
-                      BorderSide(color: primaryColor),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide:
-                      BorderSide(color: primaryColor, width: 1.5),
-                    ),
-                  ),
+                CommonTextFormField(
+                  primaryColor: AppColor.primaryColor,
+                  fieldColor: fieldColor,
+                  text: "Last Name",
+                  icons: Icon(Icons.people_outline_rounded),
                 ),
-
-                const SizedBox(height: 15),
+                 SizedBox(height: 15.h),
 
                 /// Phone Row
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 18),
-                      decoration: BoxDecoration(
-                        color: fieldColor,
-                        borderRadius: BorderRadius.circular(15),
-                        border: Border.all(color: primaryColor),
-                      ),
-                      child: const Text(
-                        "+1242",
-                        style: TextStyle(
-                          color: primaryColor,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    Expanded(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: "Phone",
-                          prefixIcon: Icon(Icons.phone_outlined,
-                              color: primaryColor),
-                          filled: true,
-                          fillColor: fieldColor,
-                          contentPadding:
-                          const EdgeInsets.symmetric(vertical: 18),
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius:
-                            BorderRadius.circular(15),
-                            borderSide:
-                            BorderSide(color: primaryColor),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius:
-                            BorderRadius.circular(15),
-                            borderSide: BorderSide(
-                                color: primaryColor, width: 1.5),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-
-                const SizedBox(height: 15),
+                CommonNumberButton(),
+                 SizedBox(height: 15.h),
 
                 /// Password
-                TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: "Password",
-                    prefixIcon:
-                    Icon(Icons.lock_outline, color: primaryColor),
-                    filled: true,
-                    fillColor: fieldColor,
-                    contentPadding:
-                    const EdgeInsets.symmetric(vertical: 18),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide:
-                      BorderSide(color: primaryColor),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide:
-                      BorderSide(color: primaryColor, width: 1.5),
-                    ),
-                  ),
+                CommonTextFormField(
+                  primaryColor: AppColor.primaryColor,
+                  fieldColor: fieldColor,
+                  text: "Password",
+                  icons: Icon(Icons.lock),
                 ),
 
-                const SizedBox(height: 15),
+                 SizedBox(height: 15.h),
 
                 /// Confirm Password
-                TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: "Confirm password",
-                    prefixIcon:
-                    Icon(Icons.lock_outline, color: primaryColor),
-                    filled: true,
-                    fillColor: fieldColor,
-                    contentPadding:
-                    const EdgeInsets.symmetric(vertical: 18),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide:
-                      BorderSide(color: primaryColor),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15),
-                      borderSide:
-                      BorderSide(color: primaryColor, width: 1.5),
-                    ),
-                  ),
+                CommonTextFormField(
+                  primaryColor: AppColor.primaryColor,
+                  fieldColor: fieldColor,
+                  text: "Confirm Password",
+                  icons: Icon(Icons.lock),
                 ),
 
-                const SizedBox(height: 25),
+                 SizedBox(height: 25.h),
 
                 /// Button
-                Container(
-                  width: double.infinity,
-                  height: 55,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(18),
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color(0xff2F80ED),
-                        Color(0xff1C6DD0),
-                      ],
-                    ),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "Sign Up",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                ),
+                CommonNextButton(call: () {
+                  controller.moveToVerifyPage();
+                }, text: 'Sign Up'),
 
-                const SizedBox(height: 30),
+                SizedBox(height: 30.h),
               ],
             ),
           ),
