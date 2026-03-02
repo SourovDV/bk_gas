@@ -7,7 +7,8 @@ import 'package:bk_gas/feature/screen/user/view/authentication_view/sign_up_view
 import 'package:bk_gas/feature/screen/user/view/authentication_view/sign_up_view/set_profile.dart';
 import 'package:bk_gas/feature/screen/user/view/authentication_view/sign_up_view/sign_up_view.dart';
 import 'package:bk_gas/feature/screen/user/view/authentication_view/sign_up_view/verify_number_view.dart';
-import 'package:bk_gas/feature/screen/user/view/homeView/account_view.dart';
+import 'package:bk_gas/feature/screen/user/view/homeView/account/account_view.dart';
+import 'package:bk_gas/feature/screen/user/view/homeView/account/edit_account.dart';
 import 'package:bk_gas/feature/screen/user/view/homeView/card_view.dart';
 import 'package:bk_gas/feature/screen/user/view/homeView/home_page_view.dart';
 import 'package:bk_gas/feature/screen/user/view/homeView/item_view.dart';
@@ -37,5 +38,7 @@ class AppRoutes{
     GetPage(name: AppPages.accountView, page: ()=>AccountView(),binding: HomepageBindings()),
     GetPage(name: AppPages.productDetails, page: ()=>ProductDetails(),binding: HomepageBindings()),
     GetPage(name: AppPages.notification, page: ()=>NotificationView(),binding: HomepageBindings()),
+    GetPage(name: AppPages.editAccount, page: ()=>EditAccount(),binding: HomepageBindings()),
+
   ];
 }

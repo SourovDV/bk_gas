@@ -14,4 +14,5 @@ class AppPages{
   static final String accountView = '/accountView';
   static final String productDetails = '/productsDetails';
   static final String notification = '/notification';
+  static final String editAccount = '/editAccount';
 }
