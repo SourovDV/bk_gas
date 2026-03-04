@@ -32,9 +32,7 @@ class EditAccount extends StatelessWidget {
 
             /// Profile Image
             const CircleAvatar(
-
             ),
-
             const SizedBox(height: 15),
 
             /// Name
@@ -59,9 +57,7 @@ class EditAccount extends StatelessWidget {
                 ),
               ),
             ),
-
             const SizedBox(height: 25),
-
             /// Info Fields
            CommonTextFormField(primaryColor: AppColor.primaryColor,
                text: "Sourov", icons: Icon(Icons.person)),
